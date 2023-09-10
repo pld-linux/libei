@@ -6,12 +6,12 @@
 Summary:	Library for Emulated Input
 Summary(pl.UTF-8):	Biblioteka emulowanego wejścia
 Name:		libei
-Version:	1.0.0
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	https://gitlab.freedesktop.org/libinput/libei/-/archive/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	aec26e2f653b3c8ccbb88705c0a399e5
+# Source0-md5:	3baafec598e2550a1df16c81168ee28b
 URL:		https://libinput.pages.freedesktop.org/libei/
 %{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libevdev-devel
@@ -19,10 +19,10 @@ BuildRequires:	libxml2-progs
 BuildRequires:	meson >= 0.56.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
-BuildRequires:	python3
+BuildRequires:	python3 >= 1:3.9
 BuildRequires:	python3-attrs
 BuildRequires:	python3-jinja2
-BuildRequires:	python3-modules
+BuildRequires:	python3-modules >= 1:3.9
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	systemd-devel
