@@ -24,7 +24,7 @@ BuildRequires:	python3-attrs
 BuildRequires:	python3-jinja2
 BuildRequires:	python3-modules >= 1:3.9
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	systemd-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -208,19 +208,19 @@ Dokumentacja API biblioteki libei.
 %setup -q
 
 %build
-%meson build \
+%meson \
 	%{!?with_static_libs:--default-library=shared} \
 	-Ddocumentation=%{?with_apidocs:api} \
 	-Dliboeffis=enabled \
 	-Dsd-bus-provider=libsystemd \
 	-Dtests=disabled
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
