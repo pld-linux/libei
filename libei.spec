@@ -6,12 +6,12 @@
 Summary:	Library for Emulated Input
 Summary(pl.UTF-8):	Biblioteka emulowanego wejścia
 Name:		libei
-Version:	1.5.0
+Version:	1.6.0
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	https://gitlab.freedesktop.org/libinput/libei/-/archive/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	3afe06351cfb6e47bd48f284b1213205
+# Source0-md5:	08186470213bdba5a4e58d322368f31d
 URL:		https://libinput.pages.freedesktop.org/libei/
 %{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libevdev-devel
